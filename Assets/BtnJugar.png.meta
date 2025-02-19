@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 32e290807ff3f9e44b5c02defb9e9c3a
+=======
+guid: 7ba0f0189406fc848b6d0a3b8badca93
+>>>>>>> 055abff3c25a6c8b47e1a8f48fb2f7f4b3b4d210
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -37,7 +41,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 1
+=======
+    filterMode: 0
+>>>>>>> 055abff3c25a6c8b47e1a8f48fb2f7f4b3b4d210
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,6 +104,22 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+=======
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> 055abff3c25a6c8b47e1a8f48fb2f7f4b3b4d210
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -134,7 +158,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< HEAD
     nameFileIdTable: {}
+=======
+    nameFileIdTable:
+      BtnJugar_0: 6034032923675315704
+>>>>>>> 055abff3c25a6c8b47e1a8f48fb2f7f4b3b4d210
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
