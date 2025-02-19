@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Letra
   - Pared
+  - Palabra
+  - Item
+  - Salida
   layers:
   - Default
   - TransparentFX

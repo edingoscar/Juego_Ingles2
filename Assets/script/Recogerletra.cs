@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class RecogerLetras : MonoBehaviour
 {
-    public GameObject letraActual;
+    public Letra letraActual = null;
     public float contador_tiempo = 0;
-    public LanzarLetra lanzarLetra;
 
     void Update()
     {
-        contador_tiempo += Time.deltaTime;
+        if(contador_tiempo < 1){
+            contador_tiempo += Time.deltaTime;
+        }
 
         //  Evitamos que la tecla E pueda soltar si ya lanzamos la letra
         if (Input.GetKeyDown(KeyCode.E) && contador_tiempo > 0.5 && letraActual != null)
@@ -22,7 +23,6 @@ public class RecogerLetras : MonoBehaviour
                 //letraActual.gameObject.SetActive(true);
             }
             letraActual = null; // Eliminamos la referencia
-            lanzarLetra.AsignarLetra(null); // Tambien avisamos a LanzarLetra
 
             contador_tiempo = 0;
         }
@@ -38,10 +38,9 @@ public class RecogerLetras : MonoBehaviour
         if (Input.GetKey(KeyCode.E) && other.CompareTag("Letra") && contador_tiempo > 0.5 && letraActual == null)
         {
             print("Recoger letra");
-            letraActual = other.gameObject;
+            letraActual = other.gameObject.GetComponent<Letra>();
             letraActual.transform.SetParent(transform);
             letraActual.GetComponent<SpriteRenderer>().sortingOrder = 2;
-            lanzarLetra.AsignarLetra(letraActual.transform);
             //letraActual.gameObject.SetActive(false);
             contador_tiempo = 0;
         }
