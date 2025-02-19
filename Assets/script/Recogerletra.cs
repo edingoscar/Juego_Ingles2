@@ -18,12 +18,17 @@ public class RecogerLetras : MonoBehaviour
             {
                 letraActual.transform.SetParent(null);
                 letraActual.transform.position = transform.position; 
-                letraActual.gameObject.SetActive(true);
+                letraActual.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                //letraActual.gameObject.SetActive(true);
             }
             letraActual = null; // Eliminamos la referencia
-            lanzarLetra.AsignarLetra(null); // También avisamos a LanzarLetra
+            lanzarLetra.AsignarLetra(null); // Tambien avisamos a LanzarLetra
 
             contador_tiempo = 0;
+        }
+
+        if(letraActual != null){
+            letraActual.transform.position = new Vector3(transform.position.x,transform.position.y + 0.4f, letraActual.transform.position.z);
         }
     }
 
@@ -35,8 +40,9 @@ public class RecogerLetras : MonoBehaviour
             print("Recoger letra");
             letraActual = other.gameObject;
             letraActual.transform.SetParent(transform);
+            letraActual.GetComponent<SpriteRenderer>().sortingOrder = 2;
             lanzarLetra.AsignarLetra(letraActual.transform);
-            letraActual.gameObject.SetActive(false);
+            //letraActual.gameObject.SetActive(false);
             contador_tiempo = 0;
         }
     }

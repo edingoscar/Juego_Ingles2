@@ -14,7 +14,9 @@ public class LanzarLetra : MonoBehaviour
         {
             print("Lanzar letra");
             letraActual.SetParent(null);
-            letraActual.gameObject.SetActive(true);
+            letraActual.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            letraActual.transform.position = transform.position; 
+            //letraActual.gameObject.SetActive(true);
 
             
             posicionObjetivo = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -25,12 +27,12 @@ public class LanzarLetra : MonoBehaviour
             recogerLetras.letraActual = null; // Quitamos la referencia en el otro script
         }
 
-        // Si hay una letra en movimiento, moverla hasta la posición objetivo
+        // Si hay una letra en movimiento, moverla hasta la posiciï¿½n objetivo
         if (enMovimiento && letraActual != null)
         {
             letraActual.position = Vector3.MoveTowards(letraActual.position, posicionObjetivo, fuerzaLanzamiento * Time.deltaTime);
 
-            // Si la letra ya llegó al objetivo, detener el movimiento
+            // Si la letra ya llegï¿½ al objetivo, detener el movimiento
             if (Vector3.Distance(letraActual.position, posicionObjetivo) < 0.1f)
             {
                 DetenerMovimiento();

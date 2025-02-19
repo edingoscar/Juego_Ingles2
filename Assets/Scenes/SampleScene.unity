@@ -8460,6 +8460,7 @@ GameObject:
   - component: {fileID: 1778803936}
   - component: {fileID: 1778803935}
   - component: {fileID: 1778803934}
+  - component: {fileID: 1778803937}
   m_Layer: 0
   m_Name: personaje
   m_TagString: Untagged
@@ -8516,7 +8517,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.17, y: 6.39}
+  m_Size: {x: 0.65625, y: 0.78125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8602,8 +8603,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3972973, y: 1.727027}
-    newSize: {x: 5.17, y: 6.39}
+    oldSize: {x: 1, y: 1.1904762}
+    newSize: {x: 0.65625, y: 0.78125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -8653,6 +8654,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rgb2d: {fileID: 1778803932}
   velocidad: 5
+--- !u!95 &1778803937
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778803929}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 857411c2c790ade45a3c796a5528aa77, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1991754991
 GameObject:
   m_ObjectHideFlags: 0
