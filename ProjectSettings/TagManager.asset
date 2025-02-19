@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Pared
+  - Palabra
+  - Item
+  - Salida
   layers:
   - Default
   - TransparentFX
