@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
         }else{
             if(WinScreen != null){
                 WinScreen.SetActive(true);
-                Time.timeScale = 0f;
             }
         }
     }

@@ -5,6 +5,9 @@ public class RecogerLetras : MonoBehaviour
     public Letra letraActual = null;
     public float contador_tiempo = 0;
 
+    public AudioClip AgarrarSound;
+    public AudioClip SoltarSound;
+
     void Update()
     {
         if(contador_tiempo < 1){
@@ -20,6 +23,7 @@ public class RecogerLetras : MonoBehaviour
                 letraActual.transform.SetParent(null);
                 letraActual.transform.position = transform.position; 
                 letraActual.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                SoundFXManager.instance.PlaySoundFXClip(SoltarSound, transform, 1f);
                 //letraActual.gameObject.SetActive(true);
             }
             letraActual = null; // Eliminamos la referencia
@@ -41,6 +45,7 @@ public class RecogerLetras : MonoBehaviour
             letraActual = other.gameObject.GetComponent<Letra>();
             letraActual.transform.SetParent(transform);
             letraActual.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            SoundFXManager.instance.PlaySoundFXClip(AgarrarSound, transform, 1f);
             //letraActual.gameObject.SetActive(false);
             contador_tiempo = 0;
         }

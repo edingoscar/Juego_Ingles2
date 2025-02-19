@@ -1935,6 +1935,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &715379918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715379920}
+  - component: {fileID: 715379919}
+  m_Layer: 0
+  m_Name: SoundFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &715379919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715379918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e560e63cacb3324abf2cddc59a5ed13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFXObject: {fileID: 6599968964561650579, guid: e1f0ed6314f0d5d459024d9dab5a1d08, type: 3}
+--- !u!4 &715379920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715379918}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760466705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,6 +2693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff964dc35b9cd5443b75a8becd7e42fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AbrirSound: {fileID: 8300000, guid: 33b9c88c5df58e44ea9167ba9b494f60, type: 3}
+  CerrarSound: {fileID: 8300000, guid: b3f6eef2b530bc3459fc0cf30ddcc026, type: 3}
 --- !u!1 &1094026236
 GameObject:
   m_ObjectHideFlags: 0
@@ -6091,6 +6138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letraActual: {fileID: 0}
   contador_tiempo: 0
+  AgarrarSound: {fileID: 8300000, guid: 31753d05c5adf4f4b8e0c00db8d4abe4, type: 3}
+  SoltarSound: {fileID: 8300000, guid: 138c3000b89b095418499289ff9dc6da, type: 3}
 --- !u!114 &1778803935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6105,6 +6154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuerzaLanzamiento: 10
   recogerLetras: {fileID: 1778803934}
+  TirarSound: {fileID: 8300000, guid: 1c39a338061366546b524cf7c90d2a39, type: 3}
 --- !u!114 &1778803936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7399,5 +7449,6 @@ SceneRoots:
   - {fileID: 332233147}
   - {fileID: 152696669}
   - {fileID: 71121697}
+  - {fileID: 715379920}
   - {fileID: 1094026240}
   - {fileID: 520016811}
