@@ -53,4 +53,12 @@ public class RecogerLetras : MonoBehaviour
             letraEnZona = other.gameObject.GetComponent<Letra>();
         }
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Letra") && letraEnZona == other.gameObject.GetComponent<Letra>())
+        {
+            letraEnZona = null;
+        }
+    }
 }

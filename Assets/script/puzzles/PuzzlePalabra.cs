@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PuzzlePalabra : MonoBehaviour
@@ -22,7 +23,15 @@ public class PuzzlePalabra : MonoBehaviour
                 if(palabraCompleta) childTransform.gameObject.SetActive(false);
             }
             if(childTransform.CompareTag("Item")){
-                if(palabraCompleta) childTransform.gameObject.SetActive(true);
+                if (palabraCompleta) 
+                {
+                    childTransform.gameObject.SetActive(true);
+                    GameManager.instance.setcontador(1);                   
+                    GameManager.instance.Palabra1 = true;
+                    GameManager.instance.Mision.color = Color.green;
+                    palabraCompleta = false;
+                }
+               
             }
         }
     }
